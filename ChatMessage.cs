@@ -1,3 +1,8 @@
+/*
+* Copyright © UAA. 2023
+*/
+
+
 public class ChatMessage
 {
     public string Text { get; set; }
