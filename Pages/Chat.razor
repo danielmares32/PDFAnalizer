@@ -78,7 +78,19 @@
             {
                 // Read the response content as a string
                 var responseBody = await response.Content.ReadAsStringAsync();
-                return responseBody;
+                
+                // Parse the JSON string into a JsonDocument
+                using (JsonDocument doc = JsonDocument.Parse(responseBody))
+                {
+                    // Access the 'response' field from the JSON document
+                    if (doc.RootElement.TryGetProperty("response", out var responseProperty))
+                    {
+                        var extractedResponse = responseProperty.GetString();
+                        return extractedResponse;
+                    }
+                }
+                // Handle the case where the API request was not successful
+                return "An error occurred while communicating with the API.";
             }
             else
             {
