@@ -1,5 +1,7 @@
 ﻿@page "/chat"
 @using Microsoft.JSInterop
+@using System.Net.Http.Json;
+@using System.Text.Json;
 
 
 
@@ -25,7 +27,15 @@
 
     [Inject]
     private IJSRuntime JSRuntime { get; set; }
+    private const string ApiBaseUrl = "http://127.0.0.1:8000";
+    private List<string> chunks; // List to store chunks from local storage
 
+    // Load chunks from local storage during initialization
+    protected override async Task OnInitializedAsync()
+    {
+        // Use JavaScript interop to load chunks from local storage
+        chunks = await JSRuntime.InvokeAsync<List<string>>("getTextFromLocalStorage","pdfResponse");
+    }
     private async Task SendMessage()
     {
         // Send the user's message to the chatbot and receive a response
@@ -46,9 +56,41 @@
 
     private async Task<string> CallChatBot(string message)
     {
-        // Simulate calling a chatbot or AI service
-        await Task.Delay(1000); // Simulated delay
-        return "This is a response from the chatbot.";
+        try
+        {
+            // Create an instance of HttpClient
+            using var httpClient = new HttpClient();
+
+            // Prepare the request data as an anonymous object
+            var requestData = new { chunks, question = message };
+
+            // Serialize the request data to JSON
+            var jsonRequest = JsonSerializer.Serialize(requestData);
+
+            // Create a StringContent with JSON data
+            var content = new StringContent(jsonRequest, System.Text.Encoding.UTF8, "application/json");
+
+            // Send a POST request to the "/answer-question" endpoint with JSON data
+            var response = await httpClient.PostAsync($"{ApiBaseUrl}/answer-question", content);
+
+            // Check if the response was successful
+            if (response.IsSuccessStatusCode)
+            {
+                // Read the response content as a string
+                var responseBody = await response.Content.ReadAsStringAsync();
+                return responseBody;
+            }
+            else
+            {
+                // Handle the case where the API request was not successful
+                return "An error occurred while communicating with the API.";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle any exceptions that may occur during the request
+            return $"An error occurred: {ex.Message}";
+        }
     }
 
     // This function scrolls to the bottom of the chat container

@@ -1,19 +1,19 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\danie\\TodoList\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\bin\\Debug\\net7.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\danie\\TodoList\\obj\\Debug\\net7.0\\build-gz\\T6vLOmKK.gz",
+      "Id": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\obj\\Debug\\net7.0\\build-gz\\T6vLOmKK.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\danie\\TodoList\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\danie\\TodoList\\wwwroot\\index.html",
+      "Id": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {

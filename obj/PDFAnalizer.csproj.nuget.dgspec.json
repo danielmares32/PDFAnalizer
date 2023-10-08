@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\danie\\TodoList\\PDFAnalizer.csproj": {}
+    "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\PDFAnalizer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\danie\\TodoList\\PDFAnalizer.csproj": {
+    "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\PDFAnalizer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\danie\\TodoList\\PDFAnalizer.csproj",
+        "projectUniqueName": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\PDFAnalizer.csproj",
         "projectName": "PDFAnalizer",
-        "projectPath": "C:\\Users\\danie\\TodoList\\PDFAnalizer.csproj",
+        "projectPath": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\PDFAnalizer.csproj",
         "packagesPath": "C:\\Users\\danie\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\danie\\TodoList\\obj\\",
+        "outputPath": "C:\\Users\\danie\\PDFAnalyzer\\PDFAnalizer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danie\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNet.WebApi.Client": {
+              "target": "Package",
+              "version": "[5.2.9, )"
+            },
             "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -50,6 +54,10 @@
             "MudBlazor": {
               "target": "Package",
               "version": "[6.10.0, )"
+            },
+            "System.Net.Http.Json": {
+              "target": "Package",
+              "version": "[7.0.1, )"
             }
           },
           "imports": [
