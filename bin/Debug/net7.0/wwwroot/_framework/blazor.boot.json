@@ -204,13 +204,13 @@
       "mscorlib.dll": "sha256-X+o60j6cZnlI2vFFjdH81yYTAxx13\/wqnNSWTKbDsyw=",
       "netstandard.dll": "sha256-Cr6slBs\/R2v2t\/vecFDHbQHakbEhar0adYu0YemwiXI=",
       "System.Private.CoreLib.dll": "sha256-dDw5nzGJhW1jOjGfSJcs\/Mi4KQ+DZygXnoK+vJ+jHyk=",
-      "PDFAnalizer.dll": "sha256-j+dg\/GzPMYEAhiWT8myCUr2fmcnAzIIH26MqyOPLf58="
+      "PDFAnalizer.dll": "sha256-KJrFFKqxW9b4oaI10hOrm+TB2ncWJbiLfpHXwXP444M="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "PDFAnalizer.pdb": "sha256-8lqMwvoZUQ6Rw\/rCS7ke\/wfluySQO5sDVB0KNq70hbQ="
+      "PDFAnalizer.pdb": "sha256-s2c2gldocV60ku4hlbFpghKUwG0\/fRK3ZHy\/JXvwydk="
     },
     "runtime": {
       "dotnet.7.0.11.beagaiide4.js": "sha256-RtIVigdAD1mUvR4pxoKyD8kcQgw4INP81v+PVSqkeQY=",
